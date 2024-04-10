@@ -1,0 +1,51 @@
+.footer-content {
+  justify-content: space-between;
+  .pi {
+    cursor: pointer;
+  }
+}
+.footer-copyright{
+  text-align: center;
+}
+
+.logo {
+  height: 60px;
+
+}
+//.footer-block {
+//  width: 23%;
+//  margin: 1%;
+//}
+
+.footer-block h4 {
+  margin-bottom: 15px;
+}
+
+.footer-block p {
+  margin-bottom: 15px;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-block li {
+  margin-bottom: 10px;
+
+.footer-block a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-block {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+}

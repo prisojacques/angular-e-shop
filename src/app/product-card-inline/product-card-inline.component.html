@@ -1,0 +1,22 @@
+<article class="product-card-inline shadow-2 hover:shadow-5 border-round-lg overflow-hidden zoom-box">
+  <div class="flex">
+    <div class="img-container w-16rem h-full align-self-center overflow-hidden p-3">
+        <!-- TODO: Change src to ngScr-->
+      <img alt="{{product.name}}" src="assets/laptop.webp" class="" />
+    </div>
+    <div class="p-3 flex flex-column justify-content-between">
+      <div class="">
+        <h5 class="text-lg md:text-xl mb-3 mt-0 font-medium">{{product.name}}</h5>
+        <p class="my-0 text-sm  font-light line-clamp-4">
+          {{ product.shortDescription }}
+        </p>
+        <p class="mt-3 text-lg md:text-xl">
+          {{ product.price | currency:'EUR' }}
+        </p>
+      </div>
+      <div class="">
+        <button class="px-3 p-2 p-button">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</article>

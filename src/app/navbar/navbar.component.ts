@@ -15,7 +15,5 @@ import {RouterLink} from "@angular/router";
 })
 export class NavbarComponent {
   @ViewChild(LoginComponent) loginComponent!: LoginComponent;
-  onUserIconClick() {
-    this.loginComponent.openDialog();
-  }
+
 }

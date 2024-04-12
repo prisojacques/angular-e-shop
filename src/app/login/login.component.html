@@ -1,16 +1,15 @@
-<!-- login.component.html -->
-<!--<p-dialog [(visible)]="showDialog">-->
-<!--    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="p-fluid">-->
-<!--        <div class="p-field">-->
-<!--            <label for="username">Username</label>-->
-<!--            <input id="username" type="text" pInputText formControlName="username">-->
-<!--        </div>-->
-<!--        <div class="p-field">-->
-<!--            <label for="password">Password</label>-->
-<!--            <input id="password" type="password" pInputText formControlName="password">-->
-<!--        </div>-->
-<!--        <button type="submit" pButton label="Login"></button>-->
-<!--    </form>-->
-<!--</p-dialog>-->
 
-<div class="">Login content</div>
+<div class="container mb-6 px-2 md:px-0">
+<form (ngSubmit)="onSubmit()" class="p-fluid">
+    <div class="p-field">
+        <label for="email">E-Mail</label>
+        <input id="email" type="email" pInputText [(ngModel)]="loginData.email" required name="email">
+    </div>
+    <div class="p-field">
+        <label for="password">Passwort</label>
+        <input id="password" type="password" pInputText [(ngModel)]="loginData.password" required name="password">
+    </div>
+    <p-button label="Anmelden" [disabled]="!loginData.email || !loginData.password"></p-button><br>
+</form>
+    <p class="onRegister">You don't have an account ? <a (click)="onAn()">Click here</a></p>
+</div>

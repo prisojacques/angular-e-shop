@@ -1,0 +1,18 @@
+<div class="container mb-6 px-2 md:px-0">
+    <form (ngSubmit)="onSubmit()" class="p-fluid">
+        <div class="p-field">
+            <label>Name</label>
+            <input  type="text" pInputText [(ngModel)]="registerData.name" required name="name">
+        </div>
+        <div class="p-field">
+            <label>E-Mail</label>
+            <input  type="email" pInputText [(ngModel)]="registerData.email" required name="email">
+        </div>
+        <div class="p-field">
+            <label>Password</label>
+            <input type="password" pInputText [(ngModel)]="registerData.password" required name="password">
+        </div>
+        <button pButton label="S'inscrire" [disabled]="!registerData.name || !registerData.email || !registerData.password"></button><br>
+    </form>
+</div>
+

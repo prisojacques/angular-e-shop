@@ -3,13 +3,13 @@ import {MenuItem} from "primeng/api";
 import {InputTextModule} from "primeng/inputtext";
 import {LoginComponent} from "../login/login.component";
 import {ButtonModule} from "primeng/button";
-import {Product} from "../models/product.model";
+import {Product} from "../../core/models/product.model";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {CurrencyPipe, NgForOf} from "@angular/common";
-import {ProductCardComponent} from "../product-card/product-card.component";
-import {PRODUCTS} from "../shared/constants";
-import {NewArrivalComponent} from "../new-arrival/new-arrival.component";
-import {BestRateComponent} from "../best-rate/best-rate.component";
+import {ProductCardComponent} from "../../shared/components/product-card/product-card.component";
+import {PRODUCTS} from "../../core/constants/constants";
+import {NewArrivalComponent} from "../../shared/components/new-arrival/new-arrival.component";
+import {BestRateComponent} from "../../shared/components/best-rate/best-rate.component";
 import {RegisterComponent} from "../register/register.component";
 
 @Component({

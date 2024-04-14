@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Product} from "../models/product.model";
-import {PRODUCTS} from "../shared/constants";
+import {Product} from "../../../core/models/product.model";
+import {PRODUCTS} from "../../../core/constants/constants";
 import {NgForOf} from "@angular/common";
 import {ProductCardComponent} from "../product-card/product-card.component";
 import {RouterLink} from "@angular/router";

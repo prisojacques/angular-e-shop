@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {ButtonModule} from "primeng/button";
-import {LoginComponent} from "../login/login.component";
+import {LoginComponent} from "../../../pages/login/login.component";
 import {RouterLink} from "@angular/router";
 
 @Component({

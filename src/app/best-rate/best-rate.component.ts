@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {Product} from "../models/product.model";
-import {BEST_RATE_PRODUCTS} from "../shared/constants";
-import {NgForOf} from "@angular/common";
+import {BEST_RATE_PRODUCTS, PRODUCTS} from "../shared/constants";
 import {RouterLink} from "@angular/router";
 import {ProductCardInlineComponent} from "../product-card-inline/product-card-inline.component";
 
@@ -9,7 +8,6 @@ import {ProductCardInlineComponent} from "../product-card-inline/product-card-in
   selector: 'app-best-rate',
   standalone: true,
   imports: [
-    NgForOf,
     RouterLink,
     ProductCardInlineComponent
   ],

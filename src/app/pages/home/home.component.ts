@@ -48,7 +48,5 @@ export class HomeComponent {
     ];
   }
 
-  onUserIconClick() {
-    this.loginComponent.openDialog();
-  }
+
 }

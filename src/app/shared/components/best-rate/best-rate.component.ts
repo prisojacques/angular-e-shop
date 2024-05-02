@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Product} from "../../../core/models/product.model";
-import {BEST_RATE_PRODUCTS} from "../../../core/constants/constants";
 import {NgForOf} from "@angular/common";
+import {Product} from "../../../core/models/product.model";
+import {BEST_RATE_PRODUCTS, PRODUCTS} from "../../../core/constants/constants";
 import {RouterLink} from "@angular/router";
 import {ProductCardInlineComponent} from "../product-card-inline/product-card-inline.component";
 

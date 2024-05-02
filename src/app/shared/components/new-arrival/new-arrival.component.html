@@ -5,8 +5,10 @@
   </div>
 
   <div class="grid">
-    <div *ngFor="let product of products" class="col-12 md:col-3">
-      <app-product-card [product]="product"></app-product-card>
-    </div>
+    @for (product of products; track product.id){
+      <div class="col-12 md:col-3">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    }
   </div>
 </div>

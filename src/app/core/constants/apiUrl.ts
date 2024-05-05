@@ -1,0 +1,1 @@
+export const basicUrl: string = 'https://shopapi.gustaveckt.com/api';

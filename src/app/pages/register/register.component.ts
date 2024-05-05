@@ -4,8 +4,8 @@ import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, V
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {Router} from "@angular/router";
-import {ApiService} from "../../service/api.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {AuthService} from "../../core/services/auth/auth.service";
 
 @Component({
   selector: 'app-register',
@@ -18,7 +18,7 @@ import {HttpErrorResponse} from "@angular/common/http";
 export class RegisterComponent{
 
   registerForm!: FormGroup;
-  constructor(private router: Router, private fb: FormBuilder, private apiService: ApiService) {
+  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) {
     this.registerForm = this.fb.group({
       email: new FormControl('', [Validators.required,Validators.email]),
       password: new FormControl('', [Validators.required]),
@@ -28,7 +28,7 @@ export class RegisterComponent{
 
   onSubmit() {
     console.log(this.registerForm.value);
-    this.apiService.registerUser(this.registerForm.value).subscribe({
+    this.authService.registerUser(this.registerForm.value).subscribe({
       next: (data) => {
         if (data) {
           this.router.navigateByUrl("/login")

@@ -4,7 +4,7 @@ import {HomeComponent} from "../home/home.component";
 import {InputTextModule} from "primeng/inputtext";
 import {ButtonModule} from "primeng/button";
 import {Router} from "@angular/router";
-import {ApiService} from "../../service/api.service";
+import {AuthService} from "../../core/services/auth/auth.service";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
@@ -17,7 +17,7 @@ import {HttpErrorResponse} from "@angular/common/http";
 export class LoginComponent {
 
 loginForm!: FormGroup;
-  constructor(private router: Router, private fb: FormBuilder, private apiService: ApiService) {
+  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) {
     this.loginForm = this.fb.group({
       email: new FormControl('', [Validators.required,Validators.email]),
       password: new FormControl('', [Validators.required]),
@@ -25,7 +25,7 @@ loginForm!: FormGroup;
   }
 
   onSubmit() {
-    this.apiService.loginUser(this.loginForm.value).subscribe({
+    this.authService.loginUser(this.loginForm.value).subscribe({
       next: (data) => {
         if (data.success) {
           this.router.navigateByUrl('')
